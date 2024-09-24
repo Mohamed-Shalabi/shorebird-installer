@@ -107,7 +107,7 @@ fi
 
 # Clone the Shorebird repository into the install_dir
 echo "Cloning Shorebird into $(install_dir)"
-git clone https://github.com/shorebirdtech/shorebird.git -b stable "$(install_dir)"
+git clone --depth 1 https://github.com/shorebirdtech/shorebird.git -b stable "$(install_dir)"
 
 # Build Shorebird
 (cd "$(install_dir)" && ./bin/shorebird --version)
